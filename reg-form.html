@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />  
+<title>平台入驻</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet"  type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+</head>
+<body class="reg-form-page">
+
+<div class="reg-form-box">
+    
+	<div class="row">
+		<div class="reg-form-box-title">
+		  <h3>平台入驻</h3>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="reg-form-box-main col-sm-12">
+			 
+			 <form class="form-horizontal">
+			  <div class="form-group">
+				<label class="col-xs-4 col-sm-3 control-label"><span class="red-star">*</span>医疗机构名称</label>
+				<div class="col-xs-7 col-sm-8">
+				  <input type="text" class="form-control" placeholder="请输入您的机构名称" id="InstitutionName">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label class="col-xs-4 col-sm-3 control-label"><span class="red-star">*</span>机构类型/等级</label>
+				<div class="col-xs-7 col-sm-8">
+				  <select class="InstitutionTypeCode" id="InstitutionTypeCode"></select>
+				  <select class="InstitutionLevelCode" id="InstitutionLevelCode"></select>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label class="col-xs-4 col-sm-3 control-label"><span class="red-star">*</span>省/市</label>
+				<div class="col-xs-7 col-sm-8">
+				    <select class="Provinces-cities" id="province-select"></select>
+					<select class="Provinces-cities" id="cities-select"></select>
+					<select class="Provinces-cities county-cities-two" id="county-select"></select>
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label class="col-xs-4 col-sm-3 control-label"><span class="red-star">*</span>联系人</label>
+				<div class="col-xs-7 col-sm-8">
+				  <input type="text" class="form-control" placeholder="请输入业务联系人" id="Contacter">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label class="col-xs-4 col-sm-3 control-label">Email</label>
+				<div class="col-xs-7 col-sm-8">
+				  <input type="text" class="form-control" placeholder="Email" id="Email">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label class="col-xs-4 col-sm-3 control-label"><span class="red-star">*</span>联系电话</label>
+				<div class="col-xs-7 col-sm-8">
+				  <input type="text" class="form-control" placeholder="联系电话" id="Phone">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label class="col-xs-4 col-sm-3 control-label"><span class="red-star">*</span>机构许可证号</label>
+				<div class="col-xs-7 col-sm-8">
+				  <input type="text" class="form-control" placeholder="机构许可证号" id="PracticeLicenseNo">
+				</div>
+			  </div>
+			  <div class="form-group">
+				<label class="col-xs-4 col-sm-3 control-label"><span class="red-star">*</span>医疗机构执业许可证：</label>
+				<div class="col-xs-7 col-sm-8">
+				  <div class="addregimg">
+					  <input type="file" name="File" class="fileToUpload" id="File" accept="image/*" capture="camera" />
+					  <span class="jiugrid-addicon"></span>
+				  </div>
+				  <div id="addregimg-box-imgshow"></div>
+				</div>
+			  </div>
+			  <div class="form-group agree-box">
+			  	<label class="col-xs-4 col-sm-3"></label>
+				<div class="col-xs-7 col-sm-8">
+
+					<label class="down-label">
+					  下载 <a class="blue-font" href="http://static.tm.519e.com.cn:8000/tm/jxsrmyy/%E6%B1%9F%E8%A5%BF%E7%9C%81%E4%BA%BA%E6%B0%91%E5%8C%BB%E9%99%A2%E8%BF%9C%E7%A8%8B%E5%8C%BB%E5%AD%A6%E4%B8%AD%E5%BF%83%E8%81%94%E7%BD%91%E7%94%B3%E8%AF%B7%E8%A1%A8.doc">“江西省人民医院远程医学中心联网申请表”</a>并寄回省人民医院
+					</label>
+					 <button type="button" class="btn btn-success col-xs-12 col-sm-12 btnok">确定</button>
+				     <!--<a href="reg-success.html" class="btn btn-success">确定</a>-->
+
+				</div>
+			  </div>
+			  
+			</form>
+	 
+		</div>	
+	</div>
+</div> 
+	
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="myModal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+<img class="loadingimg" src="image/load.gif"/>
+    </div>
+  </div>
+</div>	
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/jquery.ajaxfileupload.js"></script>
+<script>
+	//选择机构类型select
+	$.getJSON("http://static.tm.519e.com.cn:8000/Dictionary/InstitutionType.json", function(TypeCodejson){
+		var TypeCodejsonhtml = "<option value=0>--选择机构类型--</option>";
+		$.each(TypeCodejson, function (id, node) {
+			TypeCodejsonhtml=TypeCodejsonhtml+"<option value="+ node.Code +">"+ node.Name +"</option>"; 						
+	   }); 
+	   $("#InstitutionTypeCode").append(TypeCodejsonhtml);
+	});
+	
+	//选择机构等级select 
+	$.getJSON("http://static.tm.519e.com.cn:8000/Dictionary/InstitutionLevel.json", function(json){
+		var jsonhtml = "<option value=0>--选择机构等级--</option>";
+		$.each(json, function (id, node) {
+			jsonhtml=jsonhtml+"<option value="+ node.Code +">"+ node.Name +"</option>"; 						
+	   }); 
+	   $("#InstitutionLevelCode").append(jsonhtml);
+	});
+
+	//选择省份三级联动
+	$.getJSON("http://static.tm.519e.com.cn:8000/Dictionary/Region.json", function(jsondata){
+			if (!jsondata) { return; }	
+			var jsonprovince = jsondata; 
+			function provincejson(jsonprovince){
+				var provincehtml = "<option value=0>--选择省份--</option>";
+				$.each(jsonprovince, function (id, node) {
+					if(node.ParentCode == null && node.Level == 0){	
+						provincehtml=provincehtml+"<option value="+ node.Code +">"+ node.Name +"</option>"; 
+					}
+			   }); 
+			   $("#province-select").append(provincehtml);
+		   }
+		   provincejson(jsonprovince);					   
+	});		
+
+	   
+	//选择城三级联动   
+	$(".reg-form-box-main").on("change","#province-select",function(){ 
+		$("#cities-select").empty();
+		var provinceCode =$(this).val();
+		if(provinceCode == 0) return;
+		$.getJSON("http://static.tm.519e.com.cn:8000/Dictionary/Region.json", function(jsondata){
+				if (!jsondata) { return; }	
+				var jsoncities = jsondata; 
+				function citiesjson(jsoncities){
+					var citieshtml = "<option value=0>--选择城市--</option>";
+					$.each(jsoncities, function (id, node) {
+						if(node.ParentCode == provinceCode && node.Level == 1){	
+							citieshtml=citieshtml+"<option value="+ node.Code +">"+ node.Name +"</option>"; 
+						}
+				   }); 
+				   $("#cities-select").append(citieshtml);
+			   }
+			   citiesjson(jsoncities);					   
+		});
+	});
+
+	//选择县区三级联动   
+	$(".reg-form-box-main").on("change","#cities-select",function(){ 
+		$("#county-select").empty();
+		var citiesCode =$(this).val();
+		if(citiesCode == 0) return;
+		$.getJSON("http://static.tm.519e.com.cn:8000/Dictionary/Region.json", function(jsondata){
+				if (!jsondata) { return; }	
+				var jsoncounty = jsondata; 
+				function countyjson(jsoncounty){
+					var countyhtml = "<option value=0>--选择县区--</option>";
+					$.each(jsoncounty, function (id, node) {
+						if(node.ParentCode == citiesCode && node.Level == 2){	
+							countyhtml=countyhtml+"<option value="+ node.Code +">"+ node.Name +"</option>"; 
+						}
+				   }); 
+				   $("#county-select").append(countyhtml);
+			   }
+			   countyjson(jsoncounty);					   
+		});
+	});
+	
+	/*$.getJSON("http://static.tm.519e.com.cn:8000/Dictionary/Region.json", function(data){
+		var datahtml;
+		$.each(data, function (id, node) {
+			$("body").append("<p>"+node.Name+"----"+node.Code+"----"+node.Level+"</p>");					
+	   }); 
+	});*/
+	
+	//上传图片
+	$('.addregimg').on("click",".jiugrid-addicon",function(){
+		$(this).siblings(".fileToUpload[type=file]").click();
+	});
+
+	$('.addregimg').on("change",".fileToUpload",function(){
+		createUploadFile();
+    });
+	
+	
+	var PracticeLicenseUrl;
+	
+	function createUploadFile() {
+
+		var data = {"ActionRequestID":"275182c8-b834-4f90-a7c1-ff45ff16b198","StatusCode":0,"StatusTag":"success","Message":"文件上传成功","Result":{"small":"http://cdn.bitcare.cn/Image/OnlineClinic/Consultation/c694c35c-06bf-435b-bab5-f36f0b4cd917_s.png","origin":"http://cdn.bitcare.cn/Image/OnlineClinic/Consultation/c694c35c-06bf-435b-bab5-f36f0b4cd917.png"}};
+		
+		PracticeLicenseUrl = data.Result.origin;
+		$("#addregimg-box-imgshow").empty();
+		$("#addregimg-box-imgshow").append('<div class="jiugrid"><i class=\"deletejson\">×</i><img src='+data.Result.small+'></div>');
+		
+		/*  ------ 上传到服务器把这段打开，上面的注释
+		$('#myModal').modal({backdrop: 'static'});
+		var data = { Key: 'fd6c505bdf43fe3b'};
+		$.ajaxFileUpload({
+			url: 'http://upload.519e.com.cn/Image/Upload?AuthToken=01e5022f-32de-4f9a-ade8-d241ce1b71d4', //用于文件上传的服务器端请求地址
+			secureuri: false, //是否需要安全协议，一般设置为false
+			fileElementId: 'File', //文件上传域的ID
+			data: data,        //传递的参数
+			dataType: 'json', //返回值类型 一般设置为json
+			success: function (data, status){
+				$('#myModal').modal('hide');
+				PracticeLicenseUrl = data.Result.origin;
+				$("#addregimg-box-imgshow").empty();
+				$("#addregimg-box-imgshow").append('<div class="jiugrid"><i class=\"deletejson\">×</i><img src='+data.Result.small+'></div>');	
+			},
+			error: function (data, status, e){
+				$('#myModal').modal('hide');
+				alert("上传失败！");
+			}
+		});*/
+	}
+	
+	//删除上传图片
+	$('#addregimg-box-imgshow').on("click",".deletejson",function(){
+		PracticeLicenseUrl = "";	
+		$("#addregimg-box-imgshow").empty();	
+		console.log(PracticeLicenseUrl);
+	})
+
+	//提交数据
+	$(".btnok").click(function () {
+		var InstitutionName = $("#InstitutionName").val();
+		var PracticeLicenseNo = $("#PracticeLicenseNo").val();
+		var InstitutionLevelCode = $("#InstitutionLevelCode").val();
+		var InstitutionTypeCode = $("#InstitutionTypeCode").val();		
+		var TargetInstitutionID = "00000036-0102-2100-0000-000000000000";
+		var Phone = $("#Phone").val();
+		var Email = $("#Email").val() ? $("#Email").val() : "";
+		var Contacter = $("#Contacter").val();		
+		var RegionCode = $("#county-select").val();
+		
+		
+		if(!InstitutionName) {alert("请填写机构名称！"); $("#InstitutionName").focus(); return;}
+		if(!PracticeLicenseNo) {alert("请填写执业资格许可证号！"); $("#PracticeLicenseNo").focus(); return;}
+		if(!PracticeLicenseUrl){alert("请上传医疗机构执业许可证！");$(".jiugrid-addicon").focus();return;}
+		if(!InstitutionTypeCode || InstitutionTypeCode == 0){
+			alert("请选择机构类型！");
+			$("#InstitutionTypeCode").focus();
+			return;
+		}
+		if(!InstitutionLevelCode || InstitutionLevelCode == 0){
+			alert("请选择机构等级！");
+			$("#InstitutionLevelCode").focus();
+			return;
+		}
+		if(!RegionCode || RegionCode == 0){
+			alert("请选择地区！");
+			$("#county-select").focus();
+			return;
+		}
+		 var regPhone = /^0?1[3|4|5|8][0-9]\d{8}$/;
+		if(!Phone) {
+			alert("请填写电话！"); $("#Phone").focus(); return;
+		}else if(!regPhone.test(Phone)){
+			alert("请填写正确的电话！"); $("#Phone").focus(); return;
+		}
+		
+		if(!Contacter) {alert("请填写联系人！"); $("#Contacter").focus(); return;}
+		
+	    var objJson = {"InstitutionName":InstitutionName,"PracticeLicenseNo":PracticeLicenseNo,"PracticeLicenseUrl":PracticeLicenseUrl,"InstitutionTypeCode":InstitutionTypeCode,"InstitutionLevelCode":InstitutionLevelCode,"RegionCode":RegionCode,"TargetInstitutionID":TargetInstitutionID,"Phone":Phone,"Email":Email,"Contacter":Contacter};
+	
+	    //debugger;
+
+		$.ajax({		   
+			url: "http://inst.tm.api.519e.com.cn:8000/Api/Institution/PartnerApplication_Post",
+			contentType: "application/json",
+			cache: "false",
+			type: "POST",
+			processData: false,
+			data: JSON.stringify(objJson),   
+			success: function(json){
+				if(json.StatusCode == 0){ 				
+					alert("上传成功！");
+				}
+				if (json.StatusCode == 1) {
+					alert("上传失败！");
+				}
+			}	
+		 });
+	
+	});
+
+</script>	
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>相册</title>
+	<link href="css/lightgallery.css" rel="stylesheet">
+	<style type="text/css">
+		body{
+			background-color: #333;
+		}
+		.demo-gallery > ul {
+		  margin-bottom: 0;
+		}
+		.demo-gallery > ul > li {
+			float: left;
+			margin-bottom: 15px;
+			margin-right: 20px;
+			width: 200px;
+		}
+		.demo-gallery > ul > li a {
+		  border: 3px solid #FFF;
+		  border-radius: 3px;
+		  display: block;
+		  overflow: hidden;
+		  position: relative;
+		  float: left;
+		}
+		.demo-gallery > ul > li a > img {
+		  -webkit-transition: -webkit-transform 0.15s ease 0s;
+		  -moz-transition: -moz-transform 0.15s ease 0s;
+		  -o-transition: -o-transform 0.15s ease 0s;
+		  transition: transform 0.15s ease 0s;
+		  -webkit-transform: scale3d(1, 1, 1);
+		  transform: scale3d(1, 1, 1);
+		  height: 100%;
+		  width: 100%;
+		}
+		.demo-gallery > ul > li a:hover > img {
+		  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+		  transform: scale3d(1.1, 1.1, 1.1);
+		}
+		.demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+		  opacity: 1;
+		}
+		.demo-gallery > ul > li a .demo-gallery-poster {
+		  background-color: rgba(0, 0, 0, 0.1);
+		  bottom: 0;
+		  left: 0;
+		  position: absolute;
+		  right: 0;
+		  top: 0;
+		  -webkit-transition: background-color 0.15s ease 0s;
+		  -o-transition: background-color 0.15s ease 0s;
+		  transition: background-color 0.15s ease 0s;
+		}
+		.demo-gallery > ul > li a .demo-gallery-poster > img {
+		  left: 50%;
+		  margin-left: -10px;
+		  margin-top: -10px;
+		  opacity: 0;
+		  position: absolute;
+		  top: 50%;
+		  -webkit-transition: opacity 0.3s ease 0s;
+		  -o-transition: opacity 0.3s ease 0s;
+		  transition: opacity 0.3s ease 0s;
+		}
+		.demo-gallery > ul > li a:hover .demo-gallery-poster {
+		  background-color: rgba(0, 0, 0, 0.5);
+		}
+		.demo-gallery .justified-gallery > a > img {
+		  -webkit-transition: -webkit-transform 0.15s ease 0s;
+		  -moz-transition: -moz-transform 0.15s ease 0s;
+		  -o-transition: -o-transform 0.15s ease 0s;
+		  transition: transform 0.15s ease 0s;
+		  -webkit-transform: scale3d(1, 1, 1);
+		  transform: scale3d(1, 1, 1);
+		  height: 100%;
+		  width: 100%;
+		}
+		.demo-gallery .justified-gallery > a:hover > img {
+		  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+		  transform: scale3d(1.1, 1.1, 1.1);
+		}
+		.demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+		  opacity: 1;
+		}
+		.demo-gallery .justified-gallery > a .demo-gallery-poster {
+		  background-color: rgba(0, 0, 0, 0.1);
+		  bottom: 0;
+		  left: 0;
+		  position: absolute;
+		  right: 0;
+		  top: 0;
+		  -webkit-transition: background-color 0.15s ease 0s;
+		  -o-transition: background-color 0.15s ease 0s;
+		  transition: background-color 0.15s ease 0s;
+		}
+		.demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+		  left: 50%;
+		  margin-left: -10px;
+		  margin-top: -10px;
+		  opacity: 0;
+		  position: absolute;
+		  top: 50%;
+		  -webkit-transition: opacity 0.3s ease 0s;
+		  -o-transition: opacity 0.3s ease 0s;
+		  transition: opacity 0.3s ease 0s;
+		}
+		.demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+		  background-color: rgba(0, 0, 0, 0.5);
+		}
+		.demo-gallery .video .demo-gallery-poster img {
+		  height: 48px;
+		  margin-left: -24px;
+		  margin-top: -24px;
+		  opacity: 0.8;
+		  width: 48px;
+		}
+		.demo-gallery.dark > ul > li a {
+		  border: 3px solid #04070a;
+		}
+		.home .demo-gallery {
+		  padding-bottom: 80px;
+		}
+		
+		.rot_box{width:512px; margin:0 auto;}
+.image_box{height:512px; text-align:center;}
+.rot1{-moz-transform:rotate(90deg) !important; -webkit-transform:rotate(90deg) !important; transform:rotate(90deg) !important; filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1) !important; -ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1) !important;transform-origin: 50% 50% !important;}
+.rot2{-moz-transform:rotate(180deg) !important; -webkit-transform:rotate(180deg) !important; transform:rotate(180deg) !important; filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2) !important; -ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2) !important;transform-origin: 50% 50% !important;}
+.rot3{-moz-transform:rotate(270deg) !important; -webkit-transform:rotate(270deg) !important; transform:rotate(270deg) !important; filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3) !important; -ms-filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3) !important;transform-origin: 50% 50% !important;}
+	</style>
+   
+</head>
+<body class="home">
+
+	<div class="demo-gallery">
+		<ul id="lightgallery" class="list-unstyled row"> </ul>
+	</div>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/picturefill.min.js"></script>
+	<script src="js/lightgallery.js"></script>
+	<script src="js/lg-fullscreen.js"></script>
+	<script src="js/lg-thumbnail.js"></script>
+	<script src="js/lg-video.js"></script>
+	<script src="js/lg-autoplay.js"></script>
+	<script src="js/lg-zoom.js"></script>
+	<script src="js/lg-hash.js"></script>
+	<script src="js/lg-pager.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+	
+			function GetQueryString(name) { 
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i"); 
+				var r = window.location.search.substr(1).match(reg); 
+				if (r!=null) return (r[2]); return null; 
+			} 
+			//var ConsultationID = "25d2c16c-699d-43ee-8604-3e5e5e48d244";
+			//http://www.ceshi.com/renminyiyuan-index-page/album.html?ConsultationID=25d2c16c-699d-43ee-8604-3e5e5e48d244
+			var ConsultationID = GetQueryString("ConsultationID");
+			
+			//if(ConsultationID!=null){
+				/*$.ajax({		   
+					url: "http://inst.tm.api.519e.com.cn:8000/Api/Institution/Consultation_Resources_Get?_dc=1457659375894&BitcareTelemedicineAuth=L0ZrQUZ6QkF1NUs4ZnZURk1QemdpbnVRWVpKQjFqMzExNnNaNEtZZkhlQ1ZvaTh6LzlQRE8ydFU3SDRKVTcwTUdIQ1JTeGVFRXZBTFY5K2Q1R1pMMHkrRHVZanJvZUljSE1LSVFmYUl0TWdSK05BSHRBV3dxTFZvUUNVWjRUUE9aNVJieGNHelFoM0lWU0MzTElPbTd3PT0=",
+					contentType: "application/json",
+					cache: "false",
+					type: "POST",
+					dataType: 'json',
+					data: JSON.stringify({
+						ConsultationID: ConsultationID
+					}),   
+					success: function(json){
+alert(123);*/
+					var json = {"Result":{"PatientResources":[{"Url":"http://cdn.bitcare.cn/Image/Telemedicine/Consultation//26b5bbe9e1194cf2ab5a0812f36a0b98.png","Type":"急诊留观病历","Desc":"[急诊留观病历][2016/03/01]测试2","ResourceTime":"2016-03-01T00:00:00+08:00","ResourceTimestamp":1456790400,"ID":"275ab46f-08fd-461e-b7c3-8f177cd18f0f","IsInvalid":false,"CreatedTime":"2016-03-11T09:21:43.6957698+08:00","UpdatedTime":"2016-03-11T09:21:43.6957698+08:00","DeletedTime":null},{"Url":"http://cdn.bitcare.cn/Image/Telemedicine/Consultation//307bc7389d7d4046b632eabc5cab37f8.png","Type":"门(急)诊病历","Desc":"[门(急)诊病历][2016/03/02]测试","ResourceTime":"2016-03-02T00:00:00+08:00","ResourceTimestamp":1456876800,"ID":"bc4bb88d-34c0-49aa-b2ad-2f074c3100c8","IsInvalid":false,"CreatedTime":"2016-03-11T09:21:43.6957698+08:00","UpdatedTime":"2016-03-11T09:21:43.6957698+08:00","DeletedTime":null}]},"ActionRequestID":"201603110922297644226","StatusCode":0,"StatusTag":"Success","Message":null};
+					
+						if(json.StatusCode == 0){ 
+							var flagimg = ".jpeg|.gif|.jpg|.png|.bmp|.pic|";
+							$.each(json.Result.PatientResources,function(i){
+							
+								if(json.Result.PatientResources[i].Url){
+									var jsonUrl = json.Result.PatientResources[i].Url;
+									var imgurl_postfix=jsonUrl.substring(jsonUrl.lastIndexOf('.')).toLowerCase();
+									var thumbnail;
+									if(flagimg.indexOf(imgurl_postfix) > 0){
+										//json.Result.PatientResources[i]["thumbnail"] = json.Result.PatientResources[i].Url;
+										thumbnail = jsonUrl.substring(0,jsonUrl.lastIndexOf('.')).toLowerCase()+"_s"+imgurl_postfix; 
+										json.Result.PatientResources[i]["thumbnail"] = thumbnail;
+										
+										$("#lightgallery").append('<li class="col-xs-6 col-sm-4 col-md-3" data-responsive='+json.Result.PatientResources[i].Url+' data-src='+json.Result.PatientResources[i].Url+' data-sub-html='+json.Result.PatientResources[i].Desc+'</p><a href=""><img class="img-responsive" src='+json.Result.PatientResources[i].Url+'></a> </li>');
+										
+									}
+								}
+								
+							});
+							$('#lightgallery').lightGallery();
+						}
+		
+						if(json.StatusCode == 1){
+							$("#lightgallery").append('抱歉暂无图片！');
+						}
+						
+				  /* }
+				});*/
+				
+			//}
+
+		});
+
+	</script>
+</body>
+</html>

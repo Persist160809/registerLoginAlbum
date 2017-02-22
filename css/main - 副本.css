@@ -1,0 +1,121 @@
+/* CSS Document */
+body{background-color:#fff;font-family:"microsoft yahei","ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3", simhei, "Helvetica Neue", Helvetica, Arial, sans-serif; text-align:center;}
+.container-fluid{padding-right: 0px; padding-left: 0px;min-width:450px;max-height:615px;}
+.row {margin-right: 0; margin-left: 0;}
+img{max-width:100%;}
+.index-logo-img{ width:15%;}
+@media (min-width:1903px){body{width:1903px; margin:0 auto;}}
+@media (max-width:992px){main.container{width:auto;}}
+
+.titlefont{
+    font-size: 30px;
+    margin-top: .6em;
+    color: #333;
+/*    -webkit-text-stroke: 2px #3d73ba;
+    text-stroke: 2px #3d73ba;*/
+    word-spacing: 8px;
+    letter-spacing: 3px;
+    font-weight: bold;
+	margin-bottom: .6em;
+}
+.box2{   
+    padding-bottom: 4em;
+    padding-top: .6em;
+    background-color: #fff;
+}
+.login-box-main{ position:relative;}
+.login-box{background:url(../image/bg.png) center center no-repeat;height: 270px;/* 295px;*/}
+.login-box-form-box{
+	width: 410px;
+    margin: 0 auto;  
+}
+.login-title{
+	color: #336ea0;
+    font-size: 20px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+.login-box-form{
+    background: #fff;
+    border: 1px solid #c0bab7;
+    border-radius: 8px;
+    padding: 25px 50px 45px;
+    -webkit-box-shadow: 0 0 21px #ccc;
+    -moz-box-shadow: 0 0 21px #ccc;
+    box-shadow: 0 0 21px #ccc;
+    width: 410px;
+   /* height: 390px;*/
+    position: absolute;
+    top: -40px;
+}
+.login-box-form input{height: 50px;font-size:14px;width:309px; border-width:2px; border-radius:8px;}
+.login-box-form .form-group{ margin-bottom:25px; font-size:14px;}
+.login-btn{   
+	/*margin-top: 22px; */
+	width: 309px;
+    background-color: #3d73ba;
+    color: #fff;
+    height: 58px;
+    line-height: 50px;
+    font-size: 18px;
+    margin-left: -8px;
+    border-left: #3d73ba;
+	border-radius:8px;
+	
+}
+.login-btn:hover{background-color: #3d73ba;color: #fff;}
+
+
+/*@media (max-width:900px) {
+  .login-box-form,.login-box-form-box{width: 60%;}
+}*/
+@media (max-width:600px) {
+  /*.box2 {padding-bottom: 2em;padding-top: 0.6em;}
+  .login-box-form,.login-box-form-box{width: 80%;}*/
+  .index-logo-img{ width:50%;}
+  .box2 h4{margin-left: 15px;margin-right: 15px; font-size: 19px;}
+  .titlefont{margin-bottom:1em;}
+}
+
+
+
+/*reg-form ----------------- page*/
+.reg-form-box{padding-right: 0px; padding-left: 0px;min-width:450px;max-height:615px;max-width:720px;margin:0 auto;}
+.reg-form-box-title{ text-align:center; font-size:18px; color:#3473a9; padding-bottom:20px;margin:40px auto 30px;
+	 border-bottom:10px solid #3473a9;}
+.red-star{ color:#ff6f8f; margin-right:.5em;}
+.blue-font{color:#5d8ab6;}
+.reg-form-box-main select{height:34px; line-height:34px; }
+.reg-form-box-main .Provinces-cities{margin-right:1em;}	 
+.reg-form-box-main label{ font-weight:normal;color:#666;}
+.reg-form-box-main .form-group{margin-bottom: 23px;}
+.addregimg{float:left;}
+.agree-box{margin-top:90px;}
+	 
+/*reg-success ----------------- page*/	 
+.reg-success-box-main{margin-top:30px;}	 
+.glyphicon-ok-regsucc-box{
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: #09cc80;
+    float: right;
+    margin-top: 15px;
+}
+.glyphicon-ok-regsucc-box-p{
+	color: #fff;
+    font-size: 4em;
+    padding-top: .2em;
+    font-weight: 100;
+}
+.contact-h4{margin-top:20px;margin-bottom:40px; font-size:18px; color:#666;}
+.reg-succes-btn{float: left;}
+
+
+/*login ----------------- page*/
+.login-form-box{max-width:1024px;max-height:516px; margin:0 auto; text-align:center;}	 
+	 
+	 
+	 
+	 
+	 
